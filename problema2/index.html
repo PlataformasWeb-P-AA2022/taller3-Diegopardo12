@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Default functionality</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="estilos.css" type="text/css" />
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+
+  } );
+  </script>
+
+</head>
+<body>
+  <div class="colums">
+    <div class="colum uno">
+      <h3>Nombre:</h3>
+      <p><input type="text" id="names"></p>
+      <h3>Apellidos:</h3>
+      <p><input type="text" id="lastname"></p>
+      <h3>Fecha de nacimiento:</h3>
+      <p><input type="text" id="datepicker"></p>
+    </div>
+    <div class="colum dos">
+      <p id="mensajeFinal"></p>
+    </div>
+    
+ </div>
+ <button type="submit">Generar Mensaje</button>
+
+</body>
+<script>
+  $(document).ready(function() {
+      $( "button" ).click(function() {
+        var texto1 = $('#names').val();
+        var texto2 = $('#lastname').val();
+        var texto3 = $('#datepicker').val();
+        $('#mensajeFinal').append("<h2>Datos ingresados:<h2>"+ texto1 + "</br>"
+        + texto2 
+        +"</br>"+ texto3);
+        console.log(texto1);
+        console.log(texto2);
+        console.log(texto3);
+      });
+    });
+</script>
+</html>
