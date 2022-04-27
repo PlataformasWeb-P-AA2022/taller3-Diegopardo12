@@ -19,7 +19,7 @@
 </head>
 <body>
   <div class="colums">
-    <div class="colum uno">
+    <div class="columuno">
       <h3>Nombre:</h3>
       <p><input type="text" id="names"></p>
       <h3>Apellidos:</h3>
@@ -27,27 +27,32 @@
       <h3>Fecha de nacimiento:</h3>
       <p><input type="text" id="datepicker"></p>
     </div>
-    <div class="colum dos">
+    <div class="columdos">
       <p id="mensajeFinal"></p>
     </div>
     
  </div>
- <button type="submit">Generar Mensaje</button>
+ <button type="submit" id="generarInformacion">Generar Mensaje</button>
+ <button type="submit" id="limpiarInformacion">Limpiar Mensaje</button>
 
 </body>
 <script>
   $(document).ready(function() {
-      $( "button" ).click(function() {
+      $( "#generarInformacion" ).click(function() {
         var texto1 = $('#names').val();
         var texto2 = $('#lastname').val();
         var texto3 = $('#datepicker').val();
         $('#mensajeFinal').append("<h2>Datos ingresados:<h2>"+ texto1 + "</br>"
         + texto2 
-        +"</br>"+ texto3);
+        +"</br>"+ 
+        texto3);
         console.log(texto1);
         console.log(texto2);
         console.log(texto3);
       });
     });
+    $( "#limpiarInformacion" ).click(function() {
+            $('#mensajeFinal').empty();
+        });
 </script>
 </html>

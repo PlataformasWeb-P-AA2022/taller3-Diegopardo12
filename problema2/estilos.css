@@ -2,3 +2,22 @@
 	width: 100%;
 	display: flex;
 }
+.columuno h3{
+	font-family: arial;
+}
+.columuno p input{
+	border-radius: 5px;
+}
+.columdos{
+	margin-left:50px ;
+}
+#mensajeFinal{
+	color: black;
+	font-family: arial;
+	border-radius: 5px;
+
+}
+button{
+	border-radius: 5px;
+
+}
