@@ -1,0 +1,16 @@
+h1{
+  color: #000000;
+  font-family: Arial;
+  font-weight: bold;
+}
+button{
+	border-radius:5px;
+}
+button:hover{
+	background: yellowgreen;
+
+}
+#mensajeFinal{
+	list-style: none;
+	font-family: Arial;
+}

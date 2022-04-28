@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width" />
     <title>Demo Jquery</title>
   <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <link rel="stylesheet" href="estilos.css" type="text/css" />
   </head>
   <body>
-      <h1>Problema 3</h1>
+      <h1>Comprehensive country codes: ISO 3166, ITU, ISO 4217 currency codes and many more</h1>
       <p id="mensajeFinal">
       </p>
       <button type="submit" id="obtenerInformacion">Obtener información</button>
@@ -23,15 +24,15 @@
             }).then(function(data) {
               for(var i=0; i<data.length; i++){
                 console.log(data[i]);
-                console.log(data[i].CLDR_display_name);
+                console.log(data[i]["CLDR display name"]);
                 console.log(data[i].Capital);
                 console.log(data[i].FIPS);
                 console.log(data[i].FIFA);
                 console.log(data[i].Continent);
                 console.log(data[i].Languages);
-                console.log(data[i].GeonameID);
+                console.log(data[i]["Geoname ID"]);
                 console.log(data[i].DS);
-                $('#mensajeFinal').append("<p> <b>Código:</b> "+ data[i].CLDR_display_name + " <b>Nombre:</b> " + data[i].Name + "</p>");
+                $('#mensajeFinal').append("<p> <li> <b>CLDR:</b> "+ data[i]["CLDR display name"] + " </li><li><b>Capital city from Geonames:</b> " + data[i].Capital + "</li><li><b> Codes from the U.S. standard FIPS PUB 10-4: </b>"+ data[i].FIPS+"</li><li><b>Codes assigned by the Fédération Internationale de Football Association: </b>"+data[i].FIFA+"</li><li><b>Continent: </b>" + data[i].Continent + "</li><li><b>Language: </b>"+ data[i].Languages+ "</li><li><b>Geoname ID: </b>" + data[i]["Geoname ID"] + "</li><li><b>Distinguishing signs of vehicles in international traffic:</b>" +data[i].DS+ "</li></p>");
               }
             });      
       });
